@@ -35,6 +35,8 @@ h1{
 }
 
 .sidebar ul{
+  background: #3e1bce94;
+  padding: 20px;
   position: fixed;
   overflow: hidden;
   list-style-type: none;
@@ -46,10 +48,11 @@ h1{
 
 .sidebar a:link, .sidebar a:visited{
   text-decoration: none;
-  color: #E55C5B;
+  color: #e8b63b;
 }
 
 .sidebar a:hover, .sidebar li.active a{
+  text-shadow: 0 0 5px rgba(0,0,0,0.6), 0 0 10px rgb(255, 255, 255);
   color: #fff;
   cursor: pointer;
 }
@@ -61,6 +64,29 @@ h1{
 .sidebar li.active{
   background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMS44MSAxOS42OCI+ICAgIDxkZWZzPiAgICAgICAgPHN0eWxlPi5jbHMtMXtmaWxsOiNmZmY7fTwvc3R5bGU+ICAgIDwvZGVmcz4gICAgPHRpdGxlPmFycm93LWxpbms8L3RpdGxlPiAgICA8ZyBpZD0iTGF5ZXJfMiIgZGF0YS1uYW1lPSJMYXllciAyIj4gICAgICAgIDxnIGlkPSJMYXllcl8xLTIiIGRhdGEtbmFtZT0iTGF5ZXIgMSI+ICAgICAgICAgICAgPHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iMy45NCIgaGVpZ2h0PSIzLjk0Ii8+ICAgICAgICAgICAgPHJlY3QgY2xhc3M9ImNscy0xIiB4PSIzLjk0IiB5PSIzLjk0IiB3aWR0aD0iMy45NCIgaGVpZ2h0PSIzLjk0Ii8+ICAgICAgICAgICAgPHJlY3QgY2xhc3M9ImNscy0xIiB4PSI3Ljg3IiB5PSI3Ljg3IiB3aWR0aD0iMy45NCIgaGVpZ2h0PSIzLjk0Ii8+ICAgICAgICAgICAgPHJlY3QgY2xhc3M9ImNscy0xIiB4PSIzLjk0IiB5PSIxMS44MSIgd2lkdGg9IjMuOTQiIGhlaWdodD0iMy45NCIvPiAgICAgICAgICAgIDxyZWN0IGNsYXNzPSJjbHMtMSIgeT0iMTUuNzQiIHdpZHRoPSIzLjk0IiBoZWlnaHQ9IjMuOTQiLz4gICAgICAgIDwvZz4gICAgPC9nPjwvc3ZnPg==) no-repeat right;
   background-position-x: 0px;
+  transform: skew(264rad);
+}
+
+.event-details {
+  font-weight: normal;
+}
+
+.event-description {
+  font-weight: normal;
+  font-size: 44px;
+  display: table;
+  vertical-align: middle;
+  padding-left: 80px;
+  padding-top: 200px;
+}
+
+.lines-left{
+  float: right;
+  margin: 40px;
+}
+
+.lines-left img {
+  max-width: 250px;
 }
 
 @media only screen and (min-height: 450px) and (min-width: 1200px){
@@ -93,8 +119,8 @@ h1{
   margin-left: 5px;
 }
 
-.details span{
-  font-size: 30px;
+.details div{
+  font-size: 43px;
   font-weight: lighter;
 }
 
@@ -113,33 +139,13 @@ h1{
   fill:#fff;
 }
 
-.ribbon .cls-6, #sponsorship .details .cls-1{
-  fill:#2a00ff;
+.ribbon svg{
+  max-width: 380px;
+  float: left;
 }
 
 .ribbon{
-  margin-left: 350px;
-  max-width: 339px;
-}
-
-.ribbon .cls-2{
-  fill:#ea5d5c;
-}
-
-.ribbon .cls-3{
-  fill:#ede15a;
-}
-
-.ribbon .cls-4{
-  fill:#b4ae34;
-}
-
-.ribbon .cls-5{
-  fill:#c94446;
-}
-
-.ribbon .cls-7{
-  fill:#272c3e;
+  padding-left: 350px;
 }
 
 .page-section{
@@ -151,19 +157,25 @@ h1{
   align-items: center;
 }
 
-#main{
-  background-image: url('../assets/img/bg1.png');
-  background-size: cover;
+#main,
+#team {
+  background: #a7554a; /* Old browsers */
+background: -moz-linear-gradient(-45deg, #a7554a 0%, #bd5a3d 26%, #6e3081 50%, #0955ae 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, #a7554a 0%,#bd5a3d 26%,#6e3081 50%,#0955ae 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, #a7554a 0%,#bd5a3d 26%,#6e3081 50%,#0955ae 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7554a', endColorstr='#0955ae',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 /* speakers */
 #speakers{
-  background-image: url('../assets/img/bg2.png');
+  background: linear-gradient(45deg, #a7554a 0%,#bd5a3d 26%,#6e3081 50%,#0955ae 100%);;
   background-size: cover;
+  height: fit-content;
 }
 
 .speaker-description{
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.26);
+  border: 1px dashed #fff6;
 }
 
 .speaker-description span{
@@ -178,28 +190,29 @@ h1{
   text-align: left;
 }
 
-.speaker-name{
-  color: #000;
+.speaker-name, .speaker-username a {
+  color: #fff;
+  font-size: 14px;
+}
+
+.speaker-name {
   text-transform: uppercase;
   font-weight: bold;
   padding: 15px;
 }
 
-.speaker-username{
+.speaker-username {
   padding: 15px;
 }
 
-.speaker-username a:link, .speaker-username a:visited{
-  background-color: #2A00FF;
-  color: #fff;
+.speaker-username a:link, .speaker-username a:visited {
   text-decoration: none;
-  padding: 0px 6px;
   font-size: 15px;
 }
 
-img.speaker-picture, .speaker-description {
-  width: 180px;
-  height: 180px;
+img.speaker-picture{
+  width: 200px;
+  height: 200px;
 }
 
 .slides-title {
@@ -222,9 +235,11 @@ img.slides-picture {
 
 
 .center {
-  /* display: grid; */
-  grid-template-columns: repeat(auto-fill, minmax(180px, 0fr));
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 0fr));
   align-items: stretch;
+  width: 70%;
+  margin: 0 auto;
 }
 .center .speaker-information {
   max-width: 100%;
@@ -250,7 +265,7 @@ img.slides-picture {
 }
 
 .button:hover{
-  background-color: #E55C5B;
+  background-color: #e8b63b;
   cursor: pointer;
 }
 
@@ -259,9 +274,27 @@ img.slides-picture {
   margin-top: 6px
 }
 
+/* Team */
+/* #team{
+  background-color:  #0d54ad;;
+  background-size: cover;
+} */
+
+/* Venue */
+#venue{
+  background-color:  #0d54ad;;
+  background-size: cover;
+}
+
+/* Venue */
+#venue{
+  background-color:  #0d54ad;;
+  background-size: cover;
+}
+
 /* contact */
 #contact{
-  background-image: url('../assets/img/bg3.png');
+  background-image: url('../assets/img/02.png');
   background-size: cover;
   background-position: right;
   background-repeat: repeat-x no-repeat;
@@ -441,7 +474,7 @@ hr {
     font-size: 2em;
   }
 
-  img.speaker-picture, .speaker-description {
+  img.speaker-picture {
     width: 100px;
     height: 100px;
   }
