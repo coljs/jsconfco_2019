@@ -31,6 +31,6 @@
   "homepage": "https://github.com/coljs/jsconfco_2019#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "express": "^4.16.4"
+    "express": "^4.17.3"
   }
 }
